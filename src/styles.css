@@ -1,0 +1,216 @@
+*,html, body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:100%;
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    overflow-x: hidden;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+}
+
+li, a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.logo{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:2em;
+    color:#fff;
+    font-weight:bold;
+}
+
+.logo > span {
+    color: #9170b1;
+}
+
+.app-navebar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px 50px;
+    position: fixed;
+}
+
+.menu{
+    display: flex;
+    gap: 10px;
+}
+
+
+.menu li a {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: background 0.3s ease-in-out;
+}
+
+
+
+.menu li a:hover{
+    background:#8420e1;
+}
+
+
+.btn-login, .btn-signup{
+    border: none;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius:6px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-login{
+    background: #8420e1;
+    transition: background 0.2s ease-in-out;
+}
+.btn-login:hover{
+    background: #8420e194;
+}
+
+.btn-signup{
+    background: #552de6;
+    transition: background 0.2s ease-in-out;
+}
+.btn-signup:hover{
+    background: #552de694;
+}
+
+
+.btn-user{
+    display: flex;
+    gap: 10px;
+}
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    padding: 0 50px;
+    height:92vh;
+    gap: 30px;
+}
+
+.content-text h1, p{
+    color: white;
+}
+
+.content-text {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content-text h1{
+    font-size: 3.2em;
+    text-align: center;
+    font-weight:bold;
+}
+
+.content-text p{
+    font-size: 1.2em;
+    max-width: 60%;
+    text-align: center;
+    color: rgb(158, 158, 158);
+}
+
+.seemore{
+    border: none;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius:6px;
+    cursor: pointer;
+    color: white;
+    background: #8420e1;
+}
+
+
+
+.toggle{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(204, 204, 204, 0.356);
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    gap: 6px;
+    align-items: center;
+    cursor: pointer;
+    display:none;
+}
+
+.toggle span{
+    width: 20px;
+}
+
+.toggle span:nth-child(1){
+    border-top: 2px solid #8420e1;
+}
+.toggle span:nth-child(2){
+    border-bottom: 2px solid #8420e1;
+}
+.toggle span:nth-child(3){
+    border-top: 2px solid #8420e1;
+}
+
+@media (max-width: 768px) {
+    .app-navebar{
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        gap:10px;
+    }
+    .content-text p{
+        max-width: 80%;
+        font-size: 1em;
+    }
+    .content-text h1{
+        font-size: 3em;
+    }
+    .toggle{
+        display: flex;
+    }
+}
+
+@media (max-width: 835px) {
+    .app-navebar{
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+        gap:10px;
+    }
+
+    .menu{
+        display: none;
+    }
+    .btn-user{
+        display: none;
+    }
+
+    .toggle{
+        display: flex;
+    }
+}
